@@ -1,0 +1,30 @@
+import java.util.ArrayDeque;
+import java.util.Deque;
+
+public class PalindromeDeque {
+    public static void main(String[] args) {
+        String original = "racecar";
+        Deque<Character> deque = new ArrayDeque<>();
+
+        for (int i = 0; i < original.length(); i++) {
+            deque.addLast(original.charAt(i));
+        }
+
+        boolean isPalindrome = true;
+        while (deque.size() > 1) {
+            char first = deque.removeFirst();
+            char last = deque.removeLast();
+
+            if (first != last) {
+                isPalindrome = false;
+                break;
+            }
+        }
+
+        if (isPalindrome) {
+            System.out.println(original + " is a palindrome.");
+        } else {
+            System.out.println(original + " is not a palindrome.");
+        }
+    }
+}
