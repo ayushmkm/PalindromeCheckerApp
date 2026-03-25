@@ -29,7 +29,6 @@ class PalindromeContext {
     public void setStrategy(PalindromeStrategy strategy) {
         this.strategy = strategy;
     }
-
     public boolean executeCheck(String text) {
         String clean = text.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
         return strategy.isValid(clean);
