@@ -1,7 +1,6 @@
 interface PalindromeStrategy {
     boolean isValid(String text);
 }
-
 class StackStrategy implements PalindromeStrategy {
     public boolean isValid(String text) {
         java.util.Stack<Character> stack = new java.util.Stack<>();
@@ -13,7 +12,6 @@ class StackStrategy implements PalindromeStrategy {
         return true;
     }
 }
-
 class DequeStrategy implements PalindromeStrategy {
     public boolean isValid(String text) {
         java.util.Deque<Character> deque = new java.util.ArrayDeque<>();
@@ -25,7 +23,6 @@ class DequeStrategy implements PalindromeStrategy {
         return true;
     }
 }
-
 class PalindromeContext {
     private PalindromeStrategy strategy;
 
@@ -38,7 +35,6 @@ class PalindromeContext {
         return strategy.isValid(clean);
     }
 }
-
 public class StrategyDemo {
     public static void main(String[] args) {
         PalindromeContext context = new PalindromeContext();
