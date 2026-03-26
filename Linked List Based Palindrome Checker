@@ -5,7 +5,6 @@ class Node {
         this.data = data;
     }
 }
-
 public class PalindromeLinkedList {
     public static void main(String[] args) {
         String original = "racecar";
